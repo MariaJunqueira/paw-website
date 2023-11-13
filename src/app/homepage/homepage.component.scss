@@ -1,0 +1,34 @@
+@import "variables";
+@import "mixin";
+
+.paw-homepage {
+  height: $size-pe-100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $size-px-20;
+
+  img {
+    width: $size-px-480;
+  }
+
+  button {
+    padding: $size-px-10 $size-px-40;
+    border-radius: $size-px-20;
+    color: $color-white;
+    font-weight: $font-medium;
+    border: $size-px-4 solid $color-white;
+  }
+
+  @include screen-size(xs) {
+    img {
+      width: $size-pe-100;
+    }
+  }
+}
+
+:host {
+  display: block;
+  height: $size-pe-100;
+}

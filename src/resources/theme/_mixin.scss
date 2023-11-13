@@ -1,0 +1,63 @@
+@mixin heading($_weight, $_size, $_height, $_spacing, $_padding) {
+  font-weight: $_weight;
+  font-size: $_size;
+  line-height: $_height;
+  letter-spacing: $_spacing;
+  padding-top: $_padding;
+
+  &:first-child {
+    padding-top: unset;
+  }
+}
+
+@mixin breakpoint($min-width: null, $max-width: null) {
+  @if $min-width !=null and $max-width !=null {
+    @media (min-width: $min-width) and (max-width: calc($max-width - $size-px-1)) {
+      @content;
+    }
+  }
+
+  @else if $min-width !=null {
+    @media (min-width: $min-width) {
+      @content;
+    }
+  }
+
+  @else if $max-width !=null {
+    @media (max-width: calc($max-width - $size-px-1)) {
+      @content;
+    }
+  }
+}
+
+@mixin screen-size($screen-size) {
+  @if $screen-size ==xl {
+    @include breakpoint($size-screen-xl, null) {
+      @content;
+    }
+  }
+
+  @else if $screen-size ==lg {
+    @include breakpoint($size-screen-lg, $size-screen-xl) {
+      @content;
+    }
+  }
+
+  @else if $screen-size ==md {
+    @include breakpoint($size-screen-md, $size-screen-lg) {
+      @content;
+    }
+  }
+
+  @else if $screen-size ==sm {
+    @include breakpoint($size-screen-sm, $size-screen-md) {
+      @content;
+    }
+  }
+
+  @else if $screen-size ==xs {
+    @include breakpoint(null, $size-screen-sm) {
+      @content;
+    }
+  }
+}
