@@ -30,12 +30,14 @@ yarn-error.log
 
 # Miscellaneous
 /.angular/cache
+/.firebase
 .sass-cache/
 /connect.lock
 /coverage
 /libpeerconnection.log
 testem.log
 /typings
+package-lock.json
 
 # System files
 .DS_Store
