@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './homepage.component.scss'
 })
 export class HomepageComponent {
-  npm = 'npm i @pawcode/cli';
+  npm = 'npm install -g @pawcode/cli';
 
   onClicked() {
     navigator.clipboard.writeText(this.npm);
