@@ -1,6 +1,8 @@
 {
-  "name": "paw-website",
-  "version": "0.0.0",
+  "name": "@pawcode/website",
+  "version": "0.0.1",
+  "description": "PawCode - Website",
+  "author": "PawCode - Team",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -36,5 +38,20 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.2.2"
-  }
+  },
+  "homepage": "https://pawcode.io",
+  "keywords": [
+    "pawcode",
+    "framework",
+    "frontend",
+    "website"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariaJunqueira/paw-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MariaJunqueira/paw-website/issues"
+  },
+  "license": "MIT"
 }
